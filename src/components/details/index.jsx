@@ -21,6 +21,8 @@ import {
   FaLinkedin,
   FaYoutube,
 } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
+import {SiGeeksforgeeks} from 'react-icons/si';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
 
@@ -140,6 +142,22 @@ const Details = ({ profile, loading, social, github }) => {
                   title="LinkedIn:"
                   value={social.linkedin}
                   link={`https://www.linkedin.com/in/${social.linkedin}`}
+                />
+              )}
+              {social?.leetcode && (
+                <ListItem
+                  icon={<SiLeetcode className="mr-2" />}
+                  title="LeetCode:"
+                  value={social.leetcode}
+                  link={`https://leetcode.com/${social.leetcode}`}
+                />
+              )}
+              {social?.gfg && (
+                <ListItem
+                  icon={<SiGeeksforgeeks className='mr-2'/>}
+                  title="Geeksforgeeks:"
+                  value={social.gfg}
+                  link={'https://auth.geeksforgeeks.org/user/${social.gfg}'}
                 />
               )}
               {social?.dribbble && (

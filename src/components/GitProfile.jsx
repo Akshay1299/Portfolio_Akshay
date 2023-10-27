@@ -181,10 +181,10 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         skills={sanitizedConfig.skills}
                       />
-                      <Experience
+                      {/* <Experience
                         loading={loading}
                         experiences={sanitizedConfig.experiences}
-                      />
+                      /> */}
                       <Education
                         loading={loading}
                         education={sanitizedConfig.education}
@@ -208,10 +208,14 @@ const GitProfile = ({ config }) => {
                         externalProjects={sanitizedConfig.externalProjects}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                       />
-                      <Blog
+                      {/* <Blog
                         loading={loading}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                         blog={sanitizedConfig.blog}
+                      /> */}
+                      <Experience
+                        loading={loading}
+                        experiences={sanitizedConfig.experiences}
                       />
                     </div>
                   </div>
@@ -254,6 +258,8 @@ GitProfile.propTypes = {
       behance: PropTypes.string,
       medium: PropTypes.string,
       dev: PropTypes.string,
+      leetcode: PropTypes.string,
+      gfg: PropTypes.string,
       stackoverflow: PropTypes.string,
       website: PropTypes.string,
       skype: PropTypes.string,
@@ -279,6 +285,7 @@ GitProfile.propTypes = {
         position: PropTypes.string,
         from: PropTypes.string,
         to: PropTypes.string,
+        description: PropTypes.string,
       })
     ),
     certifications: PropTypes.arrayOf(

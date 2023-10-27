@@ -156,6 +156,8 @@ export const sanitizeConfig = (config) => {
       medium: config?.social?.medium,
       dev: config?.social?.dev,
       stackoverflow: config?.social?.stackoverflow,
+      leetcode: config?.social?.leetcode,
+      gfg: config?.social?.gfg,
       website: config?.social?.website,
       phone: config?.social?.phone,
       email: config?.social?.email,
